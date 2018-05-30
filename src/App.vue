@@ -1,19 +1,19 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <h1></h1>
-    <pagenation :current="2" :total="40" :currentChange="whenChange"></pagenation>
+      <h3>{{msg}}</h3>
+      <my_address></my_address>
   </div>
 </template>
 
 <script>
-import page from './components/page'
+import my_address from "./components/address";
 import Vue from 'vue'
 
-Vue.use(page);
+Vue.use(my_address);
 
 export default {
-  name: 'app',
+    components: {my_address},
+    name: 'app',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
@@ -26,7 +26,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>
